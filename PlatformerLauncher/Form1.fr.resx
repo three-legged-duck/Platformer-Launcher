@@ -121,7 +121,7 @@
     <value>Quitter</value>
   </data>
   <data name="readmeButton.Text" xml:space="preserve">
-    <value>Lisezmoi</value>
+    <value>Manuel du jeu</value>
   </data>
   <data name="setupButton.Text" xml:space="preserve">
     <value>Installation</value>
@@ -130,7 +130,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASwAAABFCAYAAADw8dtTAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxAAAAsQAa0jvXUAAEPeaVRYdFhNTDpjb20uYWRvYmUu
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACw8AAAsPAZL5A6UAAEPeaVRYdFhNTDpjb20uYWRvYmUu
         eG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/
         Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29y
         ZSA1LjUtYzAyMSA3OS4xNTQ5MTEsIDIwMTMvMTAvMjktMTE6NDc6MTYgICAgICAgICI+CiAgIDxyZGY6
@@ -503,17 +503,5 @@
         Rx9d6yN+72JkoWEYRjsiCw3DMNoRWWgYhtGOyELDMIx2RBYahmG0I7LQMAyjHZGFhmEY7YgsNAzDaEdk
         oWEYRjsiCw3DMNoRWWgYhtGOyELDMIz2I3P/B4vQ7T7n7IjZAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="errorReadme" xml:space="preserve">
-    <value>Il y a eu une erreur lors de l'ouverture du lisezmoi.</value>
-  </data>
-  <data name="errorSetup" xml:space="preserve">
-    <value>Il y a eu une erreur lors du lancement de l'installeur.</value>
-  </data>
-  <data name="errorTitle" xml:space="preserve">
-    <value>Erreur !</value>
-  </data>
-  <data name="readmeFile" xml:space="preserve">
-    <value>lisezmoi.txt</value>
   </data>
 </root>

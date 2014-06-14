@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.Resources;
 
 namespace PlatformerLauncher
 {
@@ -17,9 +17,6 @@ namespace PlatformerLauncher
 
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-
-        //To get ressources from the form's resx
-        private readonly ResourceManager _res = new ResourceManager(typeof (LauncherForm));
 
         public LauncherForm()
         {
@@ -46,11 +43,24 @@ namespace PlatformerLauncher
         {
             try
             {
-                Process.Start("notepad", Application.StartupPath + @"\" + _res.GetString("readmeFile"));
+                Process.Start(CultureInfo.CurrentCulture.TwoLetterISOLanguageName.StartsWith("fr")
+                    ? "manuel.html"
+                    : "manual.html");
             }
             catch
             {
-                MessageBox.Show(_res.GetString("errorReadme"), _res.GetString("errorTitle"),
+                string errorTitle, errorMessage;
+                if (CultureInfo.CurrentCulture.TwoLetterISOLanguageName.StartsWith("fr"))
+                {
+                    errorTitle = "Erreur !";
+                    errorMessage = "Impossible d'ouvrir le manuel.";
+                }
+                else
+                {
+                    errorTitle = "Error !";
+                    errorMessage = "Unable to open the manual.";
+                }
+                MessageBox.Show(errorMessage, errorTitle,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -63,8 +73,19 @@ namespace PlatformerLauncher
             }
             catch
             {
-                MessageBox.Show(_res.GetString("errorSetup"), _res.GetString("errorTitle"),
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string errorTitle, errorMessage;
+                if (CultureInfo.CurrentCulture.TwoLetterISOLanguageName.StartsWith("fr"))
+                {
+                    errorTitle = "Erreur !";
+                    errorMessage = "Impossible d'ouvrir l'installeur.";
+                }
+                else
+                {
+                    errorTitle = "Error !";
+                    errorMessage = "Unable to open the setup.";
+                }
+                MessageBox.Show(errorMessage, errorTitle,
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
